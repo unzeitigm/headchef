@@ -1,0 +1,3 @@
+services:
+	cache.storage: Nette\Caching\Storages\FileStorage
+	router: App\Router\RouterFactory::createRouter

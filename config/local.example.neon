@@ -1,0 +1,17 @@
+parameters:
+
+console:
+	url: http://localhost:80
+
+nettrine.dbal:
+	connection:
+		host: localhost
+		driver: mysqli
+		dbname: dbname
+		user: root
+		password: root
+
+services:
+#	cache.storage: Nette\Caching\Storages\FileStorage
+	cache.storage: Nette\Caching\Storages\DevNullStorage
+	security.authenticator: Contributte\Security\Auth\DebugAuthenticator(true)

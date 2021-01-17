@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}headchef</title>
+</head>
+
+<body>
+	{snippet flashes}
+		<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">
+			<p>{$flash->message}</p>
+		</div>
+	{/snippet}
+
+	{include content}
+</body>
+</html>
